@@ -1,0 +1,20 @@
+.button {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-base-white;
+  text-decoration: none;
+  background-color: $color-base-primary;
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary-lighter;
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+  }
+}
