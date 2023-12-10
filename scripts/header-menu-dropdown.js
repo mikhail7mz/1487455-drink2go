@@ -1,0 +1,1 @@
+var e=document.querySelector(".header__menu-toggle"),n=document.querySelector(".header__menu-dropdown"),o=()=>{n.classList.toggle("header__menu-dropdown--opened")},t=()=>{e.addEventListener("click",o)};export{t as initHeaderMenuDropdown};
