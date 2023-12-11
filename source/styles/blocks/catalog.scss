@@ -13,12 +13,28 @@
   }
 }
 
+.catalog__wrapper {
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+    grid-template-areas:
+      "badge badge badge"
+      "heading heading heading"
+      "form sort sort"
+      "form cards cards"
+      "form pagination pagination";
+  }
+}
+
 .catalog__badge {
+  grid-area: badge;
   margin-bottom: 4px;
   text-align: center;
 }
 
 .catalog__heading {
+  grid-area: heading;
   margin-bottom: 20px;
   text-align: center;
 
@@ -27,7 +43,22 @@
   }
 }
 
+.catalog__form {
+  grid-area: form;
+  margin-bottom: 40px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 44px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 0;
+    padding-top: 4px;
+  }
+}
+
 .catalog__sort {
+  grid-area: sort;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -84,6 +115,7 @@
 }
 
 .catalog__card-list {
+  grid-area: cards;
   display: grid;
   gap: 20px;
   margin: 0;
@@ -166,6 +198,7 @@
 }
 
 .catalog__pagination {
+  grid-area: pagination;
   display: flex;
   gap: 20px;
 

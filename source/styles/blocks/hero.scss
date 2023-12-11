@@ -253,16 +253,19 @@
 
   &:focus,
   &:hover {
-    background: linear-gradient(
-      90deg, $color-base-white 0%,
-      transparentize($color-base-white, 1) 100%);
+    background:
+      linear-gradient(
+        90deg,
+        $color-base-white 0%,
+        transparentize($color-base-white, 1) 100%); /* stylelint-disable-line function-no-unknown */
   }
 
   &:active {
-    background: linear-gradient(
-      90deg,
-      transparentize($color-base-primary, 0.75) 0%,
-      transparentize($color-base-primary, 1) 100%);
+    background:
+      linear-gradient(
+        90deg,
+        transparentize($color-base-primary, 0.75) 0%,
+        transparentize($color-base-primary, 1) 100%); /* stylelint-disable-line function-no-unknown */
   }
 }
 

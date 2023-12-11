@@ -1,6 +1,7 @@
 .button {
   display: block;
   padding: 8px 20px;
+  border: none;
   border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
@@ -14,7 +15,34 @@
     background-color: $color-primary-lighter;
   }
 
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
   &:active {
     background-color: $color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $color-base-grey;
+  }
+}
+
+.button--light {
+  color: $color-base-primary;
+  background-color: $color-base-white;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-base-primary;
+  }
+
+  &:disabled {
+    background-color: $color-light-grey;
   }
 }
