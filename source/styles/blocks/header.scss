@@ -154,12 +154,6 @@
   }
 }
 
-.header__menu-dropdown {
-  @media #{$not-mobile} {
-    margin: 0 auto;
-  }
-}
-
 .header__menu-dropdown .header__menu-list {
   @media #{$not-mobile} {
     max-width: 500px;
@@ -215,6 +209,10 @@
         background-color: $color-base-secondary;
       }
     }
+  }
+
+  @media #{$not-mobile} {
+    margin: 0 auto;
   }
 }
 
