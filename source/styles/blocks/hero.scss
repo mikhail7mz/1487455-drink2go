@@ -178,6 +178,11 @@
   overflow-wrap: anywhere;
 }
 
+.hero__button {
+  position: relative;
+  z-index: 1;
+}
+
 .hero__pagination {
   display: none;
   position: absolute;
