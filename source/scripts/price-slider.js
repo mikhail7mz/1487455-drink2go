@@ -1,5 +1,5 @@
 const PRICE_MIN = 0;
-const PRICE_MAX = 1000;
+const PRICE_MAX = 980;
 const PRICE_STEP = 1;
 const PRICE_START = [0, 900];
 

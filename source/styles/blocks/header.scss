@@ -5,8 +5,12 @@
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-right: -20px;
+
+  @media #{$not-mobile} {
+    margin-right: 0;
+  }
 
   @media #{$desktop-only} {
     margin-right: 0;
@@ -14,11 +18,14 @@
 }
 
 .header__logo {
+  position: relative;
+  top: 12px;
   width: 32px;
   height: 36px;
   flex-shrink: 0;
 
   @media #{$not-mobile} {
+    top: 22px;
     width: 82px;
     margin-right: 7px;
   }
@@ -30,6 +37,8 @@
 }
 
 .header__title {
+  position: relative;
+  top: 24px;
   display: none;
   width: 126px;
   margin: 0;
@@ -43,15 +52,10 @@
 
 .header__navigation {
   display: flex;
+  align-items: flex-start;
 
-  @media #{$desktop-only} {
+  @media #{$not-mobile} {
     flex-grow: 1;
-    justify-content: space-between;
-
-    &::before {
-      width: 0;
-      content: "";
-    }
   }
 }
 
@@ -90,12 +94,21 @@
 .header__menu-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media #{$desktop-only} {
     gap: 20px;
+  }
+}
+
+.header__menu-user {
+  max-width: 180px;
+
+  @media #{$desktop-only} {
+    max-width: 350px;
   }
 }
 
@@ -113,11 +126,12 @@
   text-decoration: none;
 
   @media #{$not-mobile} {
-    padding: 32px 20px;
+    padding: 32px 22px;
   }
 
   @media #{$desktop-only} {
     column-gap: 8px;
+    overflow-wrap: anywhere;
   }
 
   &:hover {
@@ -140,7 +154,24 @@
   }
 }
 
-.header__menu-link--active {
+.header__menu-dropdown {
+  @media #{$not-mobile} {
+    margin: 0 auto;
+  }
+}
+
+.header__menu-dropdown .header__menu-list {
+  @media #{$not-mobile} {
+    max-width: 500px;
+  }
+}
+
+.header__menu-dropdown .header__menu-link {
+  padding: 32px 20px;
+  overflow-wrap: anywhere;
+}
+
+.header__menu-dropdown .header__menu-link--active {
   @media #{$not-mobile} {
     padding-bottom: 30px;
     border-bottom: 2px solid $color-base-primary;
@@ -148,9 +179,11 @@
 }
 
 .header__menu-text {
+  width: 0;
   font-size: 0;
 
   @media #{$desktop-only} {
+    width: auto;
     font-size: 12px;
   }
 }

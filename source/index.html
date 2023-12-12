@@ -8,7 +8,6 @@
     <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -21,9 +20,9 @@
         <div class="header__wrapper">
           <a class="header__logo" href="#">
             <picture>
-              <source media="(min-width: 1440px)" srcset="images/logo-large.svg" type="image/svg+xml" width="170" height="36">
-              <source media="(min-width: 768px)" srcset="images/logo-middle.svg" type="image/svg+xml" width="82" height="36">
-              <img class="header__logo-image" src="images/logo-small.svg" width="32" height="36" alt="Текстовый логотип сайта в виде слов drink2go">
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-large.svg" width="170" height="36">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-middle.svg" width="82" height="36">
+              <img class="header__logo-image" src="images/logo-small.svg" width="32" height="36" alt="Текстовый логотип сайта в виде слов drink2go.">
             </picture>
           </a>
           <p class="header__title">Интернет-магазин кофейных напитков</p>
@@ -32,10 +31,10 @@
               <button class="header__menu-toggle js-toggle-button" type="button">
                 <span class="visually-hidden">Кнопка открытия меню.</span>
                 <svg class="header__menu-toggle-icon header__menu-toggle-icon--open" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="images/icons/stack.svg#menu"/>
+                  <use href="images/icons/stack.svg#menu"/>
                 </svg>
                 <svg class="header__menu-toggle-icon header__menu-toggle-icon--close" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="images/icons/stack.svg#close"/>
+                  <use href="images/icons/stack.svg#close"/>
                 </svg>
               </button>
               <ul class="header__menu-list">
@@ -53,11 +52,11 @@
                 </li>
               </ul>
             </div>
-            <ul class="header__menu-list">
+            <ul class="header__menu-user header__menu-list">
               <li class="header__menu-item">
                 <a class="header__menu-link" href="#">
                   <svg class="header__menu-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="images/icons/stack.svg#user"/>
+                    <use href="images/icons/stack.svg#user"/>
                   </svg>
                   <span class="header__menu-text">Войти</span>
                 </a>
@@ -65,7 +64,7 @@
               <li class="header__menu-item">
                 <a class="header__menu-link" href="#">
                   <svg class="header__menu-icon" width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="images/icons/stack.svg#cart"/>
+                    <use href="images/icons/stack.svg#cart"/>
                   </svg>
                   <span class="header__menu-text">Корзина</span>
                 </a>
@@ -88,15 +87,15 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/decaf-flat-white--desktop@1x.webp 1x, images/decaf-flat-white--desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="images/decaf-flat-white--tablet@1x.webp 1x, images/decaf-flat-white--tablet@2x.webp 2x">
                     <source type="image/webp" srcset="images/decaf-flat-white--mobile@1x.webp 1x, images/decaf-flat-white--mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="images/decaf-flat-white--desktop@1x.png 1x, images/decaf-flat-white--desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="images/decaf-flat-white--tablet@1x.png 1x, images/decaf-flat-white--tablet@2x.png 2x">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/decaf-flat-white--desktop@1x.png 1x, images/decaf-flat-white--desktop@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/decaf-flat-white--tablet@1x.png 1x, images/decaf-flat-white--tablet@2x.png 2x">
                     <img class="hero__image" src="images/decaf-flat-white--mobile@1x.png" srcset="images/decaf-flat-white--mobile@1x.png 1x, images/decaf-flat-white--mobile@2x.png 2x" width="280" height="280" alt="Алюминиевая банка напитка Декаф Флэт Уайт." loading="lazy">
                   </picture>
                 </div>
                 <div class="hero__content">
                   <p class="hero__badge badge">Новинка!</p>
                   <h3 class="hero__title">Декаф Флэт Уайт</h3>
-                  <p class="hero__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским&nbsp;молоком — то, что нужно&nbsp;для&nbsp;расслабления после тяжёлого&nbsp;рабочего дня</p>
+                  <p class="hero__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским&nbsp;молоком — то, что нужно для&nbsp;расслабления после тяжёлого&nbsp;рабочего дня</p>
                   <div class="hero__buy">
                     <p class="hero__price">
                       <del class="hero__price-old">295₽</del>
@@ -116,8 +115,8 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-latte--desktop@1x.webp 1x, images/lavender-latte--desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-latte--tablet@1x.webp 1x, images/lavender-latte--tablet@2x.webp 2x">
                     <source type="image/webp" srcset="images/lavender-latte--mobile@1x.webp 1x, images/lavender-latte--mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="images/lavender-latte--desktop@1x.png 1x, images/lavender-latte--desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="images/lavender-latte--tablet@1x.png 1x, images/lavender-latte--tablet@2x.png 2x">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/lavender-latte--desktop@1x.png 1x, images/lavender-latte--desktop@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/lavender-latte--tablet@1x.png 1x, images/lavender-latte--tablet@2x.png 2x">
                     <img class="hero__image" src="images/lavender-latte--mobile@1x.png" srcset="images/lavender-latte--mobile@1x.png 1x, images/lavender-latte--mobile@2x.png 2x" width="280" height="280" alt="Алюминиевая банка напитка Лавандовый Латте." loading="lazy">
                   </picture>
                 </div>
@@ -144,8 +143,8 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/triple-espresso--desktop@1x.webp 1x, images/triple-espresso--desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="images/triple-espresso--tablet@1x.webp 1x, images/triple-espresso--tablet@2x.webp 2x">
                     <source type="image/webp" srcset="images/triple-espresso--mobile@1x.webp 1x, images/triple-espresso--mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="images/triple-espresso--desktop@1x.png 1x, images/triple-espresso--desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="images/triple-espresso--tablet@1x.png 1x, images/triple-espresso--tablet@2x.png 2x">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/triple-espresso--desktop@1x.png 1x, images/triple-espresso--desktop@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/triple-espresso--tablet@1x.png 1x, images/triple-espresso--tablet@2x.png 2x">
                     <img class="hero__image" src="images/triple-espresso--mobile@1x.png" srcset="images/triple-espresso--mobile@1x.png 1x, images/triple-espresso--mobile@2x.png 2x" width="280" height="280" alt="Алюминиевая банка напитка Тройной Эспрессо." loading="lazy">
                   </picture>
                 </div>
@@ -182,13 +181,13 @@
               <button class="hero__slider-toggle hero__slider-toggle--prev slider-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
                 <svg class="hero__slider-toggle-icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="images/icons/stack.svg#slider-toggle"/>
+                  <use href="images/icons/stack.svg#slider-toggle"/>
                 </svg>
               </button>
               <button class="hero__slider-toggle hero__slider-toggle--next slider-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
                 <svg class="hero__slider-toggle-icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="images/icons/stack.svg#slider-toggle"/>
+                  <use href="images/icons/stack.svg#slider-toggle"/>
                 </svg>
               </button>
             </div>
@@ -206,7 +205,7 @@
             </li>
             <li class="features__item features__item--fit">
               <h3 class="features__title subheading">Удобство</h3>
-              <p class="features__paragraph">Легко помещается и в карман, и в маленькую сумочку</p>
+              <p class="features__paragraph">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
             </li>
             <li class="features__item features__item--energy">
               <h3 class="features__title subheading">Бодрость</h3>
@@ -214,7 +213,7 @@
             </li>
             <li class="features__item features__item--ecology">
               <h3 class="features__title subheading">Экологичность</h3>
-              <p class="features__paragraph">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="features__paragraph">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -225,9 +224,9 @@
             <p class="catalog__badge badge">Каталог</p>
             <h2 class="catalog__heading heading">Каталог кофейных напитков</h2>
             <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="form__fieldset">
+              <div class="form__division">
                 <h3 class="form__title">Цена</h3>
-                <div class="form__range-slider" id="form__range-slider"></div>
+                <div class="form__range-slider"></div>
                 <div class="form__control-group">
                   <label class="form__control">
                     <span class="form__control-label visually-hidden">От.</span>
@@ -238,8 +237,8 @@
                     <input class="form__control-input" type="number" name="price-max" placeholder="900" value="900">
                   </label>
                 </div>
-              </fieldset>
-              <fieldset class="form__fieldset">
+              </div>
+              <div class="form__division">
                 <h3 class="form__title">Наличие молока</h3>
                 <label class="form__control form__control--radio">
                   <input class="form__control-input visually-hidden" type="radio" name="milk-type" value="any" checked>
@@ -257,8 +256,8 @@
                   <input class="form__control-input visually-hidden" type="radio" name="milk-type" value="no-milk" disabled>
                   <span class="form__control-label">Без молока</span>
                 </label>
-              </fieldset>
-              <fieldset class="form__fieldset">
+              </div>
+              <div class="form__division">
                 <h3 class="form__title">Страна произрастания</h3>
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="country" value="brazil" checked>
@@ -280,7 +279,7 @@
                   <input class="form__control-input visually-hidden" type="checkbox" name="country" value="peru" disabled>
                   <span class="form__control-label">Перу</span>
                 </label>
-              </fieldset>
+              </div>
               <div class="form__button-group">
                 <button class="form__button button" type="submit">Применить</button>
                 <button class="form__button button button--light" type="reset">Сбросить</button>
@@ -288,7 +287,7 @@
             </form>
             <div class="catalog__sort">
               <span class="catalog__sort-title">Сортировка:</span>
-              <select class="catalog__sort-select" aria-label="Сортировка.">
+              <select class="catalog__sort-select" name="sort" aria-label="Сортировка.">
                 <option value="default" selected>По умолчанию</option>
                 <option value="cheap">Подешевле</option>
                 <option value="expensive">Подороже</option>
@@ -369,7 +368,12 @@
               </li>
             </ul>
             <div class="catalog__pagination">
-              <button class="catalog__pagination-button catalog__pagination-button--prev" type="button">Назад</button>
+              <button class="catalog__pagination-button catalog__pagination-button--prev" type="button">
+                <svg class="catalog__pagination-button-icon" width="10" height="10" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <use href="images/icons/stack.svg#select-up"/>
+                </svg>
+                <span class="catalog__pagination-button-text">Назад</span>
+              </button>
               <ul class="catalog__pagination-list">
                 <li class="catalog__pagination-item">
                   <a class="catalog__pagination-link" href="#">1</a>
@@ -381,7 +385,12 @@
                   <a class="catalog__pagination-link" href="#">3</a>
                 </li>
               </ul>
-              <button class="catalog__pagination-button catalog__pagination-button--next" type="button">Вперёд</button>
+              <button class="catalog__pagination-button catalog__pagination-button--next" type="button">
+                <svg class="catalog__pagination-button-icon" width="10" height="10" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <use href="images/icons/stack.svg#select-up"/>
+                </svg>
+                <span class="catalog__pagination-button-text">Вперёд</span>
+              </button>
             </div>
           </div>
         </div>
@@ -392,9 +401,9 @@
           <source type="image/webp" media="(min-width: 1440px)" srcset="images/map--desktop@1x.webp 1x, images/map--desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="images/map--tablet@1x.webp 1x, images/map--tablet@2x.webp 2x">
           <source type="image/webp" srcset="images/map--mobile@1x.webp 1x, images/map--mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="images/map--desktop@1x.png 1x, images/map--desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="images/map--tablet@1x.png 1x, images/map--tablet@2x.png 2x">
-          <img class="map__image" src="images/map--mobile@1x.png" srcset="images/map--mobile@1x.png 1x, images/map--mobile@2x.png 2x" width="320" height="420" alt="Алюминиевая банка напитка Декаф Флэт Уайт." loading="lazy">
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/map--desktop@1x.png 1x, images/map--desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/map--tablet@1x.png 1x, images/map--tablet@2x.png 2x">
+          <img class="map__image" src="images/map--mobile@1x.png" srcset="images/map--mobile@1x.png 1x, images/map--mobile@2x.png 2x" width="320" height="420" alt="Участок карты с местоположением магазина." loading="lazy">
         </picture>
       </section>
     </main>
@@ -404,8 +413,8 @@
           <div class="footer__intro">
             <a class="footer__logo" href="#">
               <picture>
-                <source media="(min-width: 768px)" srcset="images/logo-large.svg" type="image/svg+xml" width="170" height="36">
-                <img class="footer__logo-image" src="images/logo-middle.svg" width="82" height="36" alt="Текстовый логотип сайта в виде слов drink2go">
+                <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-large.svg" width="170" height="36">
+                <img class="footer__logo-image" src="images/logo-middle.svg" width="82" height="36" alt="Текстовый логотип сайта в виде слов drink2go.">
               </picture>
             </a>
             <p class="footer__info">Интернет-магазин кофейных напитков</p>
@@ -414,7 +423,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Перейти на ВКонтакте.</span>
                   <svg class="social__icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="images/icons/stack.svg#social-vk"/>
+                    <use href="images/icons/stack.svg#social-vk"/>
                   </svg>
                 </a>
               </li>
@@ -422,7 +431,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Перейти на Pinterest</span>
                   <svg class="social__icon" width="22" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="images/icons/stack.svg#social-pinterest"/>
+                    <use href="images/icons/stack.svg#social-pinterest"/>
                   </svg>
                 </a>
               </li>
@@ -430,7 +439,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Перейти на ОДноклассники</span>
                   <svg class="social__icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="images/icons/stack.svg#social-ok"/>
+                    <use href="images/icons/stack.svg#social-ok"/>
                   </svg>
                 </a>
               </li>
@@ -474,10 +483,10 @@
           </div>
           <p class="footer__copyrights">
             <span>Разработано в</span>
-            <a class="footer__copyrights-link" href="#">
+            <a class="footer__copyrights-link" href="https://htmlacademy.ru/intensive/adaptive">
               <span>HTML Academy</span>
               <svg class="footer__copyrights-icon" width="12" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="images/icons/stack.svg#htmlacademy"/>
+                <use href="images/icons/stack.svg#htmlacademy"/>
               </svg>
             </a>
           </p>
@@ -485,7 +494,7 @@
       </div>
     </footer>
 
-    <script src="vendor/nouislider/nouislider.js"></script>
+    <script src="vendor/nouislider/nouislider.js" defer></script>
     <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

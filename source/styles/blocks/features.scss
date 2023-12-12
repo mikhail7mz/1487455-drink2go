@@ -37,11 +37,14 @@
 
   @media #{$not-mobile} {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 30px;
+    gap: 50px 20px;
+    padding-left: 10px;
   }
 
   @media #{$desktop-only} {
     grid-template-columns: repeat(4, 1fr);
+    gap: 50px 30px;
+    padding-left: 0;
   }
 }
 
@@ -56,7 +59,7 @@
     padding-top: 0;
     padding-left: 72px;
     text-align: left;
-    background-position: top left;
+    background-position: top 2px left;
   }
 
   @media #{$desktop-only} {
@@ -93,4 +96,10 @@
 
 .features__paragraph {
   margin: 0;
+  overflow-wrap: anywhere;
+
+  @media #{$not-mobile} {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

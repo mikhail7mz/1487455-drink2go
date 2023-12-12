@@ -63,10 +63,13 @@
 }
 
 .footer__logo {
+  display: block;
   flex-shrink: 0;
   transform: translateY(2px);
 
   @media #{$desktop-only} {
+    width: 170px;
+    height: 36px;
     margin-bottom: 10px;
   }
 }
@@ -75,6 +78,7 @@
   margin: 0;
   font-size: 0;
   visibility: hidden;
+  overflow-wrap: anywhere;
 
   @media #{$desktop-only} {
     margin-bottom: 50px;
@@ -89,6 +93,10 @@
   @media #{$not-mobile} {
     padding: 0;
   }
+
+  @media #{$desktop-only} {
+    padding-top: 9px;
+  }
 }
 
 .footer__title {
@@ -99,6 +107,7 @@
   line-height: 20px;
   letter-spacing: 0.28px;
   color: $color-base-primary;
+  overflow-wrap: anywhere;
 }
 
 .footer__menu {
@@ -120,18 +129,27 @@
   letter-spacing: 0.24px;
   text-transform: uppercase;
   color: $color-base-black;
+  overflow-wrap: anywhere;
 }
 
 .footer__address,
 .footer__phone {
+  margin-top: 0;
   padding-left: 19px;
   background-repeat: no-repeat;
   background-position: left top 2px;
   background-size: 13px 16px;
+  overflow-wrap: anywhere;
 }
 
 .footer__address {
+  padding-top: 8px;
   background-image: url("../../images/icons/stack.svg#location");
+  background-position-y: 10px;
+
+  @media #{$desktop-only} {
+    margin-bottom: 16px;
+  }
 }
 
 .footer__phone {
@@ -181,6 +199,7 @@
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
+  overflow-wrap: anywhere;
 
   &:focus,
   &:hover {

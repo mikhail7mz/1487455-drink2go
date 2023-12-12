@@ -18,7 +18,7 @@
   }
 }
 
-.form__fieldset {
+.form__division {
   display: grid;
   align-content: start;
   gap: 20px;
@@ -32,6 +32,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  overflow-wrap: anywhere;
 }
 
 .form__control-group {
@@ -126,6 +127,7 @@
 .form__control-label {
   font-size: 16px;
   line-height: 24px;
+  overflow-wrap: anywhere;
 }
 
 .form__control-input {
@@ -133,9 +135,7 @@
   padding: 8px 10px;
   border: 2px solid $color-primary-lighter;
   border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font: 500 16px/24px $font-primary;
   text-align: center;
   background-color: $color-base-white;
   appearance: textfield;

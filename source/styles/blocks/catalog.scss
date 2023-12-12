@@ -1,9 +1,10 @@
 .catalog {
   padding-top: 50px;
-  padding-bottom: 44px;
+  padding-bottom: 42px;
   background-color: $background-color-lightest-grey;
 
   @media #{$not-mobile} {
+    padding-top: 80px;
     padding-bottom: 90px;
   }
 
@@ -48,7 +49,7 @@
   margin-bottom: 40px;
 
   @media #{$not-mobile} {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
 
   @media #{$desktop-only} {
@@ -77,6 +78,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .catalog__sort-select {
@@ -150,6 +152,7 @@
   width: 130px;
   height: 188px;
   margin: 0 auto 24px;
+  object-fit: contain;
 
   @media #{$not-mobile} {
     margin-bottom: 30px;
@@ -165,7 +168,9 @@
 }
 
 .catalog__card-description {
+  margin-top: 0;
   margin-bottom: 16px;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
     margin-bottom: 20px;
@@ -184,6 +189,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
+  overflow-wrap: anywhere;
 }
 
 .catalog__card-button {
@@ -209,6 +215,7 @@
 
 .catalog__pagination-button {
   display: flex;
+  align-items: flex-start;
   flex-shrink: 0;
   min-width: 40px;
   min-height: 40px;
@@ -216,36 +223,36 @@
   border: none;
   border-radius: 4px;
   background-color: $color-base-white;
+  font-family: $font-primary;
   font-size: 0;
-  line-height: 24px;
   color: $color-base-primary;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
     padding: 8px 20px;
     font-size: 16px;
-  }
-
-  &::before {
-    width: 10px;
-    height: 10px;
-    margin: auto;
-    background-color: $color-base-primary;
-    mask: url("../../images/icons/stack.svg#select-up") center / cover;
-    content: "";
-
-    @media #{$not-mobile} {
-      display: none;
-    }
-  }
-
-  &--prev::before {
-    transform: rotate(-90deg) translateY(-2px);
-  }
-
-  &--next::before {
-    transform: rotate(90deg) translateY(-2px);
+    line-height: 24px;
   }
 }
+
+.catalog__pagination-button-icon {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+
+  @media #{$not-mobile} {
+    display: none;
+  }
+}
+
+.catalog__pagination-button--prev .catalog__pagination-button-icon {
+  transform: rotate(-90deg) translate(2px, -2px);
+}
+
+.catalog__pagination-button--next .catalog__pagination-button-icon {
+  transform: rotate(90deg) translate(-2px, -2px);
+}
+
 
 .catalog__pagination-list {
   display: flex;
@@ -268,6 +275,7 @@
   text-decoration: none;
   color: $color-base-primary;
   background-color: $color-base-white;
+  overflow-wrap: anywhere;
 }
 
 .catalog__pagination-item--active .catalog__pagination-link {
