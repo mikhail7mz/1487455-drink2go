@@ -1,4 +1,6 @@
-/*! nouislider - 15.6.0 - 05/01/2022 */
+/* eslint-disable */
+
+// ! nouislider - 15.6.0 - 05/01/2022
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -159,7 +161,6 @@
   // Issue #785
   function getSupportsPassive() {
       var supportsPassive = false;
-      /* eslint-disable */
       try {
           var opts = Object.defineProperty({}, "passive", {
               get: function () {
@@ -170,7 +171,6 @@
           window.addEventListener("test", null, opts);
       }
       catch (e) { }
-      /* eslint-enable */
       return supportsPassive;
   }
   function getSupportsTouchActionNone() {
@@ -2253,3 +2253,4 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
+/* eslint-enable */
